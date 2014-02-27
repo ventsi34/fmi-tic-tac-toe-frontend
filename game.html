@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	 	<title>FMI Tic Tac Toe - game</title>
+	 	<meta name="description" content="Free Tic Tac Toe from student of FMI.">
+		<meta name="keywords" content="Tic Tac Toe, game, FMI, FMI Tic Tac Toe">
+		<meta name="author" content="Ventsislav Dimitrov">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"/>
+	 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/main-js.js"></script>
+	</head>
+	<body>
+		<!-- div for error messages -->
+		<div id="errorMessage">
+		</div>
+		<!-- site header -->
+		<header>
+			<div id="header">
+				<div class="container-fluid">
+					<div id="header-container" class="row-fluid">
+						<div id="logo-container" class="span1">
+							<h1 id="logo"><a href="http://game.ventsi.net/index.html" title="FMI tic tac toe"><img src="img/logo.png" width="160" height="160" alt="logo"></a></h1>
+						</div>
+						<div id="form-container" class="span8 offset3 clear">
+							<div id="btn-exit-container" class="clear">
+								<p id="welcome-text"></p>
+								<button type="button" id="exit-btn" class="form-send-btn">Изход</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- site main content -->
+		<section>
+			<div id="main-container" class="container-fluid">
+				<div class="row-fluid">
+					<!-- opponent container -->
+					<div id="additional-info-container" class="span5">
+						<div id="additional-game-container">
+							<div id="user-game-container" class="sub-turn-container clear">
+								<div id="user-profil-container">
+									<img src="img/user.png" alt="user-image" width="48" height="48"/>
+									<p id="gameOpponentName"></p>
+								</div>
+								<div id="user-options">
+									<nav>
+										<ul id="game-options-list">
+											<li><button type="button" id="close-game-btn" title="Прекрати играта"></button></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div id="user-turn-container" class="sub-turn-container">
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<!-- game container -->
+					<div id="container" class="span7">
+						<div id="game-container">
+							<div id="first-row" class="game-row clear">
+								<div id="first-row-left" class="game-area" data-row="0" data-col="0"></div>
+								<div class="game-area" data-row="0" data-col="1"></div>
+								<div id="first-row-right" class="game-area" data-row="0" data-col="2"></div>
+							</div>
+							<div class="game-row clear">
+								<div class="game-area" data-row="1" data-col="0"></div>
+								<div class="game-area" data-row="1" data-col="1"></div>
+								<div class="game-area" data-row="1" data-col="2"></div>
+							</div>
+							<div class="game-row clear">
+								<div id="last-row-left" class="game-area" data-row="2" data-col="0"></div>
+								<div class="game-area" data-row="2" data-col="1"></div>
+								<div id="last-row-right" class="game-area" data-row="2" data-col="2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

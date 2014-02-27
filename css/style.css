@@ -1,0 +1,661 @@
+/* ================================================================= */
+/*							RESETER
+/* ================================================================= */
+header, section, aside, article, footer, nav,
+html, body, div, span, h1, h2, h3, h4, h5, h6,
+p, blockquote, a, img, dl, dt, dd, ol, ul, li{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #fff url('../img/background.gif');
+	font-family: Tahoma,  sans-serif;
+	font-size: 62.5%;
+	color: #000;
+	word-wrap: break-word;
+}
+ol, ul {
+	list-style: none;
+}
+img {
+	border: 0; 
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+/* ================================================================= */
+/*							CLEAR FIX
+/* ================================================================= */
+.clear:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.clear{
+	min-height: 0;
+	zoom: 1;
+}
+
+/* ================================================================= */
+/*							MAIN STYLES
+/* ================================================================= */
+.container-fluid{
+	width: 960px;
+	margin: 0 auto;
+}
+@font-face {
+    font-family: 'silent_reactionregular';
+    src: url('../fonts/silent_reaction-webfont.eot');
+    src: url('../fonts/silent_reaction-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/silent_reaction-webfont.woff') format('woff'),
+         url('../silent_reaction-webfont.ttf') format('truetype'),
+         url('../silent_reaction-webfont.svg#silent_reactionregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+#errorMessage{
+	display: none;
+	min-height: 35px;
+	background: #ffd7d7;
+	border: 2px solid #df8f8f;
+}
+#errMessageText{
+	text-align: center;
+	font-size: 1.6em;
+	color: #555;
+	line-height: 30px;
+}
+/* ================================================================= */
+/*							 HEADER
+/* ================================================================= */
+#header{
+	width: 100%;
+	min-height: 80px;
+	background-color: #54535e;
+	box-shadow: 0 0 10px #bbb;
+	position: relative;
+	z-index: 10;
+}
+#header-container{
+	position: relative;
+}
+	#logo-container{
+		position: absolute;
+		top: 100%;
+		background: url('../img/logo-container.png') no-repeat;
+		width: 427px;
+		height: 197px;
+	}
+	#logo{
+		margin: -60px 0 0 130px;
+	}
+	#login-form, #btn-exit-container{
+		margin: 16px 0 20px 0;
+		float: right;
+	}
+	.input-field{
+		float: left;
+		display: block;
+		width: 170px;
+		height: 40px;
+		margin-left: 15px;
+		padding: 0 5px 0 5px;
+		color: #54535e;
+		border: 2px solid #f5a445;
+		border-radius: 5px;
+		font-size: 1.8em;
+		outline: none;
+	}
+	.form-send-btn{
+		float: left;
+		display: block;
+		min-width: 80px;
+		height: 41px;
+		margin: 1px 0 0 15px;
+		border: 1px solid #fff;
+		background: #f5a445 url('../img/small-btn-background.gif') repeat-x;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 2.4em;
+		cursor: pointer;
+	}
+/* ================================================================= */
+/*					MAIN CONTENT INDEX PAGE
+/* ================================================================= */
+#main-container{
+	z-index: 1;
+	position: relative;
+	margin-top: -20px;
+	padding: 40px 0 10px 0;
+	background: #f8fafc;
+	border-radius: 10px;
+	border: 1px solid #54535e;
+}
+	#register-container{
+		height: 200px;
+	}
+		#register-btn{
+			width: 430px;
+			height: 80px;
+			margin-left: 55px; 
+			border: 2px solid #fff;
+			background: #f5a445 url('../img/btn-background.gif') repeat-x;
+			color: #fff;
+			border-radius: 10px;
+			font-size: 2.4em;
+			cursor: pointer;
+		}
+		#register-form-container{
+			display: none;
+			width: 530px;
+			height: 80px;
+			margin-top: 15px;
+			background: #54535e;
+			box-shadow: 0 0 10px #bbb;
+			border-radius: 10px;
+		}
+		#register-username, #register-pass{
+			margin: 17px 0 0 10px;
+		}
+		#send-reg-form-btn{
+			width: 120px;
+			margin: 17px 0 0 10px;
+			font-size: 1.6em;
+		}
+	#article{
+		padding: 10px 50px;
+		color: #54535e;
+		font-size: 2em;
+		text-align: justify;
+	}
+
+/* ================================================================= */
+/*					MAIN CONTENT HOME PAGE
+/* ================================================================= */
+
+.user-containers{
+	width: 86%;
+	overflow: auto;
+	margin-left: 27px;
+	padding: 5px;
+	background: #fff;
+	border: 1px solid #54535e;
+	border-radius: 5px;
+}
+#game-invitation-container{
+	height: 300px;
+	margin-top: 180px;
+}
+#online-users-container{
+	height: 480px;
+}
+	.user-container-title{
+		margin-bottom: 10px;
+		text-align: center;
+		color: #54535e;
+		font-size: 2em;
+		font-weight: normal;
+	}
+.user-profil{
+	overflow: hidden;
+	width: 98%;
+	height: 60px;
+	margin: 5px 0 0 3px;
+	border: 1px solid #54535e;
+	background: #f5a445;
+	border-radius: 5px;
+}
+	.user-profil div{
+		float: left;
+		background: #f8fafc;
+		width: 85%;
+		height: 100%;
+		margin: -1px 0 0 -1px;
+		border: 1px solid #54535e;
+		border-radius: 5px;
+	}
+	.user-profil div img{
+		display: block;
+		float: left;
+		margin: 5px 0 0 5px;
+	}
+	.user-profil div p{
+		float: left;
+		width: 79%;
+		margin: 8px 0 0 10px;
+		line-height: 45px;
+		font-size: 2em;
+	}
+	.game-btn{
+		float: left;
+		width: 14.4%;
+		height: 100%;
+		background: url('../img/game.png') no-repeat center 0;
+		border: none;
+		cursor: pointer;
+	}
+#welcome-text{
+	float: left;
+	width: 350px;
+	margin-top: 10px;
+	line-height: 20px;
+	color: #fff;
+	font-size: 2em;
+	text-align: right;
+}
+#invitation-usr-cont .user-profil div,
+#online-usr-cont .user-profil div{
+	cursor: pointer;
+}
+/* ================================================================= */
+/*							GAME STYLES
+/* ================================================================= */
+#game-container{
+	width: 510px;
+	height: 510px;
+	margin-left: 25px;
+	background: #54535e;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #bbb;
+}
+#first-row{
+	padding: 14px 0 0 4px;
+}
+.game-row{
+	margin-top: 14px;
+	padding-left: 4px;
+	width: 100%;
+	height: 29.412%;
+}
+	.game-area{
+		float: left;
+		margin-left: 10px;
+		width: 29.412%;
+		height: 100%;
+		background: #fff;
+		border: 2px solid #f5a445;
+		font-size: 10em;
+		font-family: 'silent_reactionregular', serif;
+		text-transform: uppercase;
+		color: #f5a445;
+		cursor: pointer;
+	}
+		.game-area p{
+			margin: 10px 0 0 20px;
+		}
+#first-row-left{
+	border-radius: 5px 0 0 0;
+}
+#first-row-right{
+	border-radius: 0 5px 0 0;
+}
+#last-row-right{
+	border-radius: 0 0 5px 0;
+}
+#last-row-left{
+	border-radius: 0 0 0 5px;
+}
+#additional-game-container{
+	width: 100%;
+	margin: 200px 0 0 10px;
+	padding: 10px 0;
+	background: #54535e;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #bbb;
+}
+.sub-turn-container{
+	width: 95%;
+	margin: 0 auto;
+}
+#user-turn-container{
+	margin-top: 10px;
+	line-height: 50px;
+	background: #fff;
+}
+	#user-turn-container p{
+		font-size: 2em;
+		color: #54535e;
+		text-align: center;
+	}
+
+	#user-profil-container{
+		height: 60px;
+		float: left;
+		width: 79%;
+		background: #fff;
+	}
+
+	#user-options{
+		float: right;
+		width: 19%;
+	}
+	
+	#user-profil-container img{
+		float: left;
+		display: block;
+		margin: 5px 10px 0 5px;
+		width: 48px;
+		height: 48px;
+	}
+
+	#gameOpponentName{
+		float: left;
+		color: #54535e;
+		font-size: 2em;
+		margin-top: 14px;
+		width: 70%;
+	}
+		#close-game-btn{
+			display: block;
+			width: 48px;
+			height: 48px;
+			background: url('../img/Close.png');
+			border: none;
+			margin: 5px 0 0 15px;
+		}
+/* ================================================================= */
+/*						RESPONSIVE STYLES
+/* ================================================================= */
+/* Large desktop */
+@media (max-width: 1199px) {
+	#register-btn{
+		float: right;
+		margin-right: 60px;
+	}
+	#register-form-container{
+		float: right;
+		margin-right: 30px;
+	}
+	#game-invitation-container{
+		height: 165px;
+	}
+	#online-users-container{
+		height: 480px;
+		margin-top: 10px;
+	}
+	#game-container{
+		margin-left: 430px;
+	}
+	#additional-game-container{
+		width: 510px;
+		margin: 0 0 0 430px;
+	}
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	.container-fluid{
+		width: 755px;
+	}
+	#logo-container{
+		position: relative;
+		background: none;
+		width: 160px;
+		height: 170px;
+	}
+	#logo{
+		margin: 0;
+	}
+	#form-container{
+		margin-left: 10%;
+		margin-top: 50px;
+	}
+	#register-container{
+		margin-left: 15%;
+	}
+	#register-btn{
+		float: none;
+		margin: 0 0 0 60px;
+	}
+	#register-form-container{
+		float: none;
+		margin: 10px 0 0 10px;	
+	}
+	.user-profil div p{
+		width: 74%;
+	}
+	#game-invitation-container{
+		height: 300px;
+		margin-top: 0;
+	}
+	#online-users-container{
+		margin-top: 0;
+	}
+	#container{
+		margin: 0 auto;
+		float: none;
+	}
+	#game-container{
+		margin-left: -35px;
+	}
+	#additional-game-container{
+		width: 515px;
+		margin-left: 125px;
+	}
+	#additional-info-container{
+		float: none;
+	}
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	.container-fluid{
+		width: 100%;
+	}
+	#logo-container{
+		position: relative;
+		top: 0;
+		margin: 0 auto;
+		background: none;
+		width: 160px;
+		height: 170px;
+	}
+	#logo{
+		margin: 0;
+	}
+	#form-container{
+		margin-left: 0;
+	}
+	#login-form{
+		float: none;
+		height: 150px;
+	}
+	.input-field{
+		float: none;
+		display: block;
+		margin: 5px auto 0 auto;
+	}
+	.form-send-btn{
+		float: none;
+		display: block;
+		margin: 5px 0 0 43%;
+	}
+	#main-container{
+		width: 99%;
+		margin-top: -30px;
+		padding-top: 20px;
+	}
+	#register-btn{
+		margin: 0;
+		float: none;
+		margin-left: 4.5%;
+		width: 91%;
+	}
+	#register-form-container{
+		width: 90%;
+		height: auto;
+		padding-bottom: 10px;
+	}
+	#register-username, #register-pass{
+		width: 91%;
+	}
+	#send-reg-form-btn{
+		width: 94%;
+	}
+	#register-container{
+		height: auto;
+	}
+	#game-invitation-container{
+		margin: 25px 0 0 3.6%;
+	}
+	#online-users-container{
+		margin-left: 3.6%;
+	}
+	#btn-exit-container{
+		float: none;
+		margin: 0 auto;
+	}
+	#btn-exit-container{
+		height: 73px;
+	}
+	#first-row{
+		margin-top: 0;
+		padding: 10px 0 0 0;
+	}
+	.game-row{
+		margin-top: 10px;
+		padding-left: 0;
+		width: 100%;
+		height: 29.412%;
+	}
+	#container{
+		padding-top: 15px;
+	}
+	#welcome-text{
+		float: none;
+		width: 99%;
+		margin-top: 5px;
+		text-align: center;
+	}
+	.user-profil div p{
+		width: 70%;
+	}
+	#additional-game-container{
+		width: 90%;
+		margin: 20px 0 0 2.5%;
+	}
+	#game-container{
+		width: 95%;
+		height: 390px;
+		margin-left: 5px;
+		font-size: 0.7em;
+	}
+	.game-row{
+		margin-top: 2%;
+	}
+	.game-area{
+		margin-left: 2.5%;
+	}
+	.game-area p{
+		text-align: center;
+		margin-left: 0;
+	}
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	#main-container{
+		width: 99%;
+	}
+	.container-fluid{
+		width: 100%;
+	}
+	.user-profil div p{
+		width: 76%;
+	}
+	#game-container{
+		width: 95%;
+		height: 390px;
+		margin-left: 5px;
+		font-size: 0.6em;
+	}
+	.game-area{
+		margin-left: 2%;
+	}
+	#btn-exit-container{
+		height: 90px;
+	}
+	.form-send-btn{
+		float: left;
+		margin-left: 40%;
+	}
+	#welcome-text{
+		display: block;
+		width: 100%;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+	#additional-game-container{
+		width: 90%;
+		margin: 20px 0 0 2.5%;
+	}
+	#register-username, #register-pass{
+		margin-left: 2%;
+	}
+	#register-form-container{
+		margin-right: 6.25%;
+	}
+	.user-containers{
+		margin-left: 0;
+		margin-left: 6.75%;
+	}
+	.user-profil div img{
+		display: none;
+	}
+
+	#close-game-btn{
+		margin-left: 2.5%;
+	}
+	#gameOpponentName{
+		width: 67%;
+		margin-left: 2%;
+	}
+	.game-area p{
+		margin-left: 7px;
+	}
+}
+/* Very small resolutions */
+@media (max-width: 320px) {
+	
+	#user-profil-container img{
+		display: none;
+	}
+
+	#additional-game-container{
+		width: 99%;
+		margin: 15px 0 0 0;
+	}
+	#game-container{
+		height: 200px;
+	}
+	.game-area{
+		margin-left: 2.2%;
+	}
+	.game-row{
+		margin-top: 3%;
+	}
+	#first-row{
+		padding: 2px 0 0 0;
+	}
+	.user-containers{
+		padding: 0;
+		margin-left: 0;
+		width: 99%;
+	}
+	.game-btn{
+		width: 29%;
+	}
+	.user-profil div{
+		width: 70%;
+	}
+	#online-users-container, #game-invitation-container{
+		margin-left: 0;
+	}
+	.game-area p{
+		font-size: 0.6em;
+		margin: 1px 0 0 0;
+	}
+	#online-users-container{
+		height: 200px;
+	}
+}

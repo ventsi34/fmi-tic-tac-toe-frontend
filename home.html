@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	    <meta charset="UTF-8">
+	 	<title>FMI Tic Tac Toe - game</title>
+	 	<meta name="description" content="Free Tic Tac Toe from student of FMI.">
+		<meta name="keywords" content="Tic Tac Toe, game, FMI, FMI Tic Tac Toe">
+		<meta name="author" content="Ventsislav Dimitrov">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"/>
+	 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	 	<link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
+        <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	</head>
+	<body>
+		<!-- div for error messages -->
+		<div id="errorMessage">
+		</div>
+		<!-- site header -->
+		<header>
+			<div id="header">
+				<div class="container-fluid">
+					<div id="header-container" class="row-fluid">
+						<div id="logo-container" class="span1">
+							<h1 id="logo"><a href="http://game.ventsi.net/index.html" title="FMI tic tac toe"><img src="img/logo.png" width="160" height="160" alt="logo"></a></h1>
+						</div>
+						<div id="form-container" class="span8 offset3 clear">
+							<div id="btn-exit-container" class="clear">
+								<p id="welcome-text"></p>
+								<button type="button" id="exit-btn" class="form-send-btn">Изход</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- site main content -->
+		<section>
+			<div id="main-container" class="container-fluid">
+				<div class="row-fluid">
+					<!-- container for game invitations -->
+					<div class="span6">
+						<div id="game-invitation-container" class="user-containers">
+							<h2 class="user-container-title">Покани за игра</h2>
+							<div id="invitation-usr-cont">
+							</div>
+						</div>
+					</div>
+					<!-- container for online users -->
+					<div class="span6">
+						<div id="online-users-container" class="user-containers">
+							<h2 class="user-container-title">Потребители на линия</h2>
+							<div id="online-usr-cont">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
